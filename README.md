@@ -9,6 +9,8 @@ Para usar el servidor hay que ejecutar el archivo 'server.jar' haciendo doble cl
 Para que el servidor sea accesible desde fuera de nuestra red local, se deberá abrir el puerto especificado en el archivo config.
 Para jugar, se ingresa en el menú de Multijugador en el juego (repo: TicTacToe-MP) y se coloca la IP seguida de dos puntos y el puerto del servidor, por ejemplo '1.1.1.1:2222' y se inicia sesión o se registra una cuenta nueva.
 
+IP para conectarse a tu propio server y darsela a el compañero: http://cualesmiip.com/ (va esa ip y luego el puerto)
+
 # Datos de la base de datos pública
 
 server_port=9999
