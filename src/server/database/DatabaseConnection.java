@@ -321,7 +321,25 @@ public class DatabaseConnection {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void aumentarWins(String username) {
 		
+		try {
+			
+			String command = "SELECT `WINS` FROM `accounts` WHERE USERNAME = '" + username + "'";
+			ResultSet res = statement.executeQuery(command);
+			res.next();
+			int wins = Integer.parseInt(res.getString("WINS"));
+			
+			command = "UPDATE `accounts` SET `WINS`=" + (wins+1) + " WHERE USERNAME = '" + username + "'";
+			statement.executeUpdate(command);
+			
+			
+		} catch(Exception e) {
+			Utilities.logs("Error al aumentar las wins de " + username);
+			e.printStackTrace();
+		}
 		
 	}
 	

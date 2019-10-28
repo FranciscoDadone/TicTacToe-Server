@@ -65,6 +65,8 @@ public class Request {
 			out.writeUTF(sendToClient);
 		} else if(recibido.getDatabaseChange().equals("GAME: pasarTurno")) {
 			DatabaseConnection.pasarTurno(recibido.getX(), recibido.getY(), recibido.getUsername());
+		} else if(recibido.getDatabaseChange().equals("INFO: aumentarWins")) {
+			DatabaseConnection.aumentarWins(username);
 		}
 
 		Utilities.logs("Sent packet: " + recibido.getDatabaseChange() + ": '" + sendToClient + "' to '" + username + "' (" + request.getInetAddress() + ").");
